@@ -23,33 +23,40 @@
                 </div>
 
                 <div class="col-sm-9 padding-right">
-                    <div class="features_items"><!--features_items-->
-                        <h2 class="title text-center">Последние товары</h2>
-
-                        <?php foreach ($latestProducts as $product): ?>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="/template/images/home/product1.jpg" alt="" />
-                                            <h2><?php echo $product['price'];?>$</h2>
-                                            <p>
-                                                <a href="/product/<?php echo $product['id'];?>">
-                                                    <?php echo $product['name'];?>
-                                                </a>
-                                            </p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                        </div>
-                                        <?php if ($product['is_new']): ?>
-                                            <img src="/template/images/home/new.png" class="new" alt="" />
-                                        <?php endif; ?>
-                                    </div>
+                    <div class="product-details"><!--product-details-->
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="view-product">
+                                    <img src="/template/images/product-details/1.jpg" alt="" />
                                 </div>
                             </div>
-                        <?php endforeach;?>
-
-                    </div><!--features_items-->
-
+                            <div class="col-sm-7">
+                                <div class="product-information"><!--/product-information-->
+                                    <img src="/template/images/product-details/new.jpg" class="newarrival" alt="" />
+                                    <h2><?php echo $product['name'];?></h2>
+                                    <p>Код товара: <?php echo $product['code'];?></p>
+                                    <span>
+                                    <span>US $<?php echo $product['price'];?></span>
+                                    <label>Количество:</label>
+                                    <input type="text" value="3" />
+                                    <button type="button" class="btn btn-fefault cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        В корзину
+                                    </button>
+                                </span>
+                                    <p><b>Наличие:</b> На складе</p>
+                                    <p><b>Состояние:</b> Новое</p>
+                                    <p><b>Производитель:</b> D&amp;G</p>
+                                </div><!--/product-information-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h5>Описание товара</h5>
+                                <?php echo $product['description'];?>
+                            </div>
+                        </div>
+                    </div><!--/product-details-->
 
                 </div>
             </div>

@@ -26,6 +26,7 @@ class Db
         } catch(PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
+               $conn->exec("set names utf8");
         return $conn;
     }
 

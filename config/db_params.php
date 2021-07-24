@@ -2,7 +2,7 @@
 
 return array(
     'host' => 'localhost',
-    'dbname' => 'super_mag',
+    'dbname' => 'mvc_site',
     'user' => 'root',
     'password'=>'admin',
 );
