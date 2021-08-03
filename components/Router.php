@@ -23,6 +23,7 @@ class Router
         // отримую строку запиту
 
         $uri = $this->getURI();
+        $uri = str_replace('index.php/', '', $uri);
 
         // перевірити наявність такого запиту в routes.php
 

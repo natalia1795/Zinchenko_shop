@@ -11,7 +11,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a href="/category/<?php echo $categoryItem['id'];?>"
+                                            <a href="/index.php/category/<?php echo $categoryItem['id'];?>"
                                                class="<?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"
                                             >
                                                 <?php echo $categoryItem['name'];?>
@@ -36,11 +36,11 @@
                                             <img src="/template/images/home/product1.jpg" alt="" />
                                             <h2><?php echo $product['price'];?>$</h2>
                                             <p>
-                                                <a href="/product/<?php echo $product['id'];?>">
+                                                <a href="/index.php/product/<?php echo $product['id'];?>">
                                                     <?php echo $product['name'];?>
                                                 </a>
                                             </p>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                            <a href="/index.php/cart/add/"<?php echo $product['id'];?> class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                         </div>
                                         <?php if ($product['is_new']): ?>
                                             <img src="/template/images/home/new.png" class="new" alt="" />
@@ -49,6 +49,17 @@
                                 </div>
                             </div>
                         <?php endforeach;?>
+
+                        <!-- Постраничная навигация -->
+                        <?php echo $pagination->get(); ?>
+
+
+                    </div><!--features_items-->
+
+                </div>
+            </div>
+        </div>
+    </section>
 
                     </div><!--features_items-->
 

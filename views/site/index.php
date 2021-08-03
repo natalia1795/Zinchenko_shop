@@ -11,7 +11,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a href="/category/<?php echo $categoryItem['id'];?>">
+                                            <a href="/index.php/category/<?php echo $categoryItem['id'];?>">
                                                 <?php echo $categoryItem['name'];?>
                                             </a>
                                         </h4>
@@ -34,7 +34,7 @@
                                             <img src="/template/images/home/product1.jpg" alt="" />
                                             <h2><?php echo $product['price'];?>$</h2>
                                             <p>
-                                                <a href="/product/<?php echo $product['id'];?>">
+                                                <a href="/index.php/product/<?php echo $product['id'];?>">
                                                     <?php echo $product['name'];?>
                                                 </a>
                                             </p>
